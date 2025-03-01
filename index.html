@@ -52,13 +52,19 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="#welcome" class="active">Home</a></li>
+                            <li class="desktop-only"><a href="#services">Services</a>
+                                <ul class="dropdown">
+                                    <li><a href="#oil-service">Oil Service</a></li>
+                                    <li><a href="#tyre-service">Tyre Service</a></li>
+                                    <li><a href="#battery-service">Battery Service</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-only"><a href="#services">Services</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#mechanical">Mechanical Service</a></li>
-                            <!-- <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#pricing-plans">pinne</a></li>
-                            <li><a href="#blog">pinneeh</a></li> -->
                             <li><a href="#contactus">Contact Us</a></li>
                         </ul>
+                        
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
@@ -90,7 +96,7 @@
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Features Small Start ***** -->
-    <section class="section home-feature">
+    <section class="section home-feature" id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -423,7 +429,12 @@ $(document).ready(function(){
         touchDrag: false
     });
 });
+
 // preloader
+
+
+// for nav
+
 
     </script>
 

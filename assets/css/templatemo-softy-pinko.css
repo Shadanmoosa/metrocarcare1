@@ -1639,3 +1639,54 @@ preloader
     height: 100px; /* Adjust gradient height */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
+
+
+/* navvvvvv */
+
+
+.nav li {
+  position: relative;
+}
+
+.nav li .dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.nav li:hover .dropdown {
+  display: block;
+}
+
+.nav li .dropdown li {
+  padding: 5px 20px;
+}
+
+.nav li .dropdown li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.nav li .dropdown li a:hover {
+  color: #fa4515;
+  background: #f1f1f1;
+}
+
+@media (max-width: 991px) {
+  .desktop-only { display: none; } /* Hides dropdown in mobile */
+  .mobile-only { display: block; } /* Shows only "Services" link */
+}
+
+@media (min-width: 992px) {
+  .mobile-only { display: none; } /* Hides mobile version on larger screens */
+}
+
