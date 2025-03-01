@@ -129,7 +129,7 @@ body {
 }
 
 .section.colored {
-  background: #e8e6e6;
+  background: #ffffff;
 }
 
 .hr {
@@ -1587,4 +1587,36 @@ preloader
   flex-grow: 1;
   font-size: 13px;
   color: #555;
+}
+
+
+/* button */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.center-heading h2 {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.main-button {
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.main-button:hover {
+  background-color: #1EBE57;
+  transform: scale(1.05);
 }
