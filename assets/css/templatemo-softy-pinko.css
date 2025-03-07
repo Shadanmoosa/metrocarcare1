@@ -374,7 +374,7 @@ header
 --------------------------------------------- 
 */
 .header-area {
-  position: fixed;
+  position: absolute;
   top: 30px;
   left: 0px;
   right: 0px;
@@ -1840,4 +1840,61 @@ preloader
       height: 100px; /* Adjust gradient height */
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   }
-  
+
+  /* whatsapp icon */
+  @keyframes popup {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    background: #25D366; /* WhatsApp Green */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: popup 0.6s ease-out, bounce 2s infinite ease-in-out 3s;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.chat-icon:hover {
+    transform: scale(1.08);
+}
+
+/* Click Effect */
+.chat-icon:active {
+    transform: scale(0.95);
+}
+
+/* WhatsApp Icon */
+.chat-icon i {
+    font-size: 30px;
+    color: white;
+}
